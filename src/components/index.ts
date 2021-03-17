@@ -1,0 +1,1 @@
+export { default as VueTwZipCodeSelector } from './vue-tw-zip-code-selector.vue'
