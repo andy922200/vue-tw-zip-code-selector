@@ -1,7 +1,20 @@
 {
   "name": "@andy922200/vue-tw-zip-code-selector",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Taiwan-Zip-Code-Selector via Vue 3.0 & TypeScript",
+  "author": "Andy Lien <andy922200@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andy922200/vue-tw-zip-code-selector.git"
+  },
+  "keywords": [
+    "Taiwan",
+    "zipCode",
+    "typescript",
+    "vue",
+    "台灣",
+    "郵遞區號"
+  ],
   "main": "dist/vue-tw-zip-code-selector.ssr.js",
   "browser": "dist/vue-tw-zip-code-selector.esm.js",
   "module": "dist/vue-tw-zip-code-selector.esm.js",
