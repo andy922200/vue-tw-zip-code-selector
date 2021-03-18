@@ -10,16 +10,9 @@ import {
     defineComponent, ref
 } from 'vue'
 
-interface ObjectKeys {
-    [key: string]: string | number | undefined | ObjectKeys;
-}
-
-interface ZoneObject extends ObjectKeys {
-    name: string;
-    zipCode: string | number;
-    county: string;
-    countyName?: string;
-}
+import {
+    ZoneObject 
+} from '../vue-tw-zip-code-selector'
 
 export default defineComponent({
     name: 'ServeDev',

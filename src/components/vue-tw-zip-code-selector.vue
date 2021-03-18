@@ -33,21 +33,9 @@ import {
     defineComponent, ref, computed
 } from 'vue'
 
-interface ObjectKeys {
-    [key: string]: string | number | undefined | ObjectKeys;
-}
-
-interface CountyObject extends ObjectKeys {
-    name: string;
-    param: string | number;
-}
-
-interface ZoneObject extends ObjectKeys {
-    name: string;
-    zipCode: string | number;
-    county: string;
-    countyName?: string;
-}
+import {
+    CountyObject, ZoneObject
+} from '../../vue-tw-zip-code-selector'
 
 const countyList: Array<CountyObject> = [
     {
@@ -1992,8 +1980,9 @@ const zoneList: Array<ZoneObject> = [
     }
 ]
 
-export default /*#__PURE__*/defineComponent({
+export default defineComponent({
     name: 'VueTwZipCodeSelector',
+    emits: ['getSelectedZone'],
     setup (props, { emit }) {
         const countyDefault = {
             name: '',
@@ -2038,16 +2027,28 @@ export default /*#__PURE__*/defineComponent({
 })
 </script>
 
-<style lang="scss">
-.TwZipSelectCore__wrapper {
-    width: 200px;
+<style scoped lang="scss">
+.TwZipSelectCore__wrapper{
+    width: 100%;
     padding: 5px;
+    display: flex;
+
+    @media screen and (max-width:500px){
+        flex-wrap: wrap;
+    }
 
     .TwZipSelectCore__select{
         text-align-last: center;
-        width: 100%;
+        width: 50%;
+        max-width: 300px;
         padding: 5px 0px;
         height: 2rem;
+        margin: 10px;
+
+        @media screen and (max-width:500px){
+            max-width:unset;
+            width: 100%;
+        }
 
         option{
             direction: ltr;

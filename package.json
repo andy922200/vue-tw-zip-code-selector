@@ -1,5 +1,5 @@
 {
-  "name": "vue-tw-zip-code-selector",
+  "name": "@andy922200/vue-tw-zip-code-selector",
   "version": "1.0.0",
   "description": "",
   "main": "dist/vue-tw-zip-code-selector.ssr.js",
@@ -10,16 +10,18 @@
   "files": [
     "dist/*",
     "vue-tw-zip-code-selector.d.ts",
+    "core-definition.d.ts",
     "src/**/*.vue"
   ],
   "sideEffects": false,
   "scripts": {
     "serve": "vue-cli-service serve dev/serve.ts",
-    "prepublish": "npm run build",
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
-    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
+    "publish to npm": "npm publish --access public",
+    "build:doc": "vue-cli-service build ./src/entry.ts --dest docs"
   },
   "dependencies": {},
   "devDependencies": {
@@ -37,15 +39,12 @@
     "@vue/cli-plugin-typescript": "^4.5.10",
     "@vue/cli-service": "^4.5.10",
     "@vue/compiler-sfc": "^3.0.7",
-    "babel-eslint": "^10.1.0",
+    "autoprefixer": "^10.2.5",
     "cross-env": "^7.0.3",
     "eslint": "^7.22.0",
-    "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-vue": "^7.7.0",
     "minimist": "^1.2.5",
-    "postcss": "^8.2.3",
-    "postcss-loader": "^5.2.0",
-    "postcss-nested": "^5.0.5",
+    "postcss": "^8.2.8",
     "rollup": "^2.36.1",
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-scss": "^2.6.1",

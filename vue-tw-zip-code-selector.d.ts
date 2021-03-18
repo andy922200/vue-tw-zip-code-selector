@@ -2,8 +2,13 @@ import {
     DefineComponent, Plugin 
 } from 'vue'
 
+import {
+    CountyObject, ZoneObject
+} from './core-definition'
 
-declare const VueTwZipCodeSelector: Exclude<Plugin['install'], undefined>
-export default VueTwZipCodeSelector
+export { CountyObject, ZoneObject }
 
-export const VueTwZipCodeSelectorSample: DefineComponent<{}, {}, any>
+declare const VueTwZipCodeSelectorInstall: Exclude<Plugin['install'], undefined>
+export default VueTwZipCodeSelectorInstall
+
+export const VueTwZipCodeSelector: DefineComponent<{}, {}, any>

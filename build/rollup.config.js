@@ -7,12 +7,14 @@ import commonjs from '@rollup/plugin-commonjs'
 import resolve from '@rollup/plugin-node-resolve'
 import replace from '@rollup/plugin-replace'
 import babel from '@rollup/plugin-babel'
-import PostCSS from 'rollup-plugin-postcss'
 import {
     terser 
 } from 'rollup-plugin-terser'
 import minimist from 'minimist'
-import scss from 'rollup-plugin-scss'
+/*For scss compiling*/
+import autoprefixer from 'autoprefixer'
+import postCSS from 'postcss'
+import rollupPluginScss from 'rollup-plugin-scss'
 
 // Get browserslist config and remove ie from es build targets
 const esbrowserslist = fs.readFileSync('./.browserslistrc')
@@ -46,18 +48,12 @@ const baseConfig = {
         vue: {
         },
         postVue: [
-            scss(),
-            // Process only `<style module>` blocks.
-            PostCSS({
-                modules: {
-                    generateScopedName: '[local]___[hash:base64:5]',
-                },
-                include: /&module=.*\.css$/,
-            }),
-            // Process all `<style>` blocks except `<style module>`.
-            PostCSS({
-                include: /(?<!&module=.*)\.css$/ 
-            }),
+            rollupPluginScss({
+                processor: css => postCSS([autoprefixer])
+                    .process(css)
+                    .then(result => result.css),
+                output: 'dist/vue-tw-zip-code-selector.css',
+            })
         ],
         babel: {
             exclude: 'node_modules/**',
