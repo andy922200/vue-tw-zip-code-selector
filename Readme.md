@@ -5,7 +5,7 @@ A Taiwan-Zip-Code-Selector via Vue 3.0 & TypeScript
 
 ## Table of Contents
   * [Getting Started](#getting-started)
-  * [Demo Page](#demo-page)
+  * [Demo](#demo)
   * [Built With](#built-with)
   * [Author](#author)
   * [License](#license)
@@ -51,8 +51,8 @@ A Taiwan-Zip-Code-Selector via Vue 3.0 & TypeScript
     "countyName": "countyName"
 }
 ```
-## Demo Page
-[Demo Page](https://nodejs.org/en/)
+## Demo
+![Alt text](/Demo.gif)
 
 ## Built With
 * [Node.js](https://nodejs.org/en/) - Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
