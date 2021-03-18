@@ -20,8 +20,7 @@
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
-    "publish to npm": "npm publish --access public",
-    "build:doc": "vue-cli-service build ./src/entry.ts --dest docs"
+    "publish to npm": "npm publish --access public"
   },
   "dependencies": {},
   "devDependencies": {
