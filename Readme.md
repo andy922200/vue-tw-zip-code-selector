@@ -27,8 +27,8 @@ A Taiwan-Zip-Code-Selector via Vue 3.0 & TypeScript
 ```javascript
     /*  main.ts or main.js */
     const app = createApp(App)
-    import 'vue-tw-zip-code-selector/dist/vue-tw-zip-code-selector.css'
-    import VueTwZipCodeSelector from 'vue-tw-zip-code-selector'
+    import '@andy922200/vue-tw-zip-code-selector/dist/vue-tw-zip-code-selector.css'
+    import VueTwZipCodeSelector from '@andy922200/vue-tw-zip-code-selector'
     app.use(VueTwZipCodeSelector)
 ```
 3. Use the component in *.vue 在 *.vue 中使用套件 
