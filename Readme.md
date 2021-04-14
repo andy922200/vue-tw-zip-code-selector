@@ -21,7 +21,7 @@ A Taiwan-Zip-Code-Selector via Vue 3.0 & TypeScript
 1. Install via npm 使用 npm 來進行安裝
 ```javascript
     cd /"your-vue-project-root-folder"/
-    npm install vue-tw-zip-code-selector
+    npm install @andy922200/vue-tw-zip-code-selector
 ```
 2. Usage in Vue 3 在 Vue 3 環境下使用
 ```javascript
