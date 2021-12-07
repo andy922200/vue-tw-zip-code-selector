@@ -28,7 +28,7 @@
     </div>
 </template>
 
-<script lang="ts">
+<script>
 import {
     defineComponent, ref, computed
 } from 'vue'
@@ -2022,7 +2022,7 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style>
 .TwZipSelectCore__wrapper {
 	width: 100%;
 	padding: 5px;

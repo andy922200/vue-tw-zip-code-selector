@@ -8,7 +8,7 @@
 </head>
 <body>
   <div id="app"></div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.24/vue.global.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.24/vue.global.prod.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue3-sfc-loader/dist/vue3-sfc-loader.js"></script>
 
   <script>
@@ -19,7 +19,6 @@
           vue: Vue
         },
         async getFile(url) {
-
           const res = await fetch(url);
           if (!res.ok)
             throw Object.assign(new Error(res.statusText + ' ' + url), { res });
@@ -28,7 +27,6 @@
           }
         },
         addStyle(textContent) {
-
           const style = Object.assign(document.createElement('style'), { textContent });
           const ref = document.head.getElementsByTagName('style')[0] || null;
           document.head.insertBefore(style, ref);

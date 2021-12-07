@@ -2027,7 +2027,7 @@ export default defineComponent({
 })
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .TwZipSelectCore__wrapper{
     width: 100%;
     padding: 5px;
